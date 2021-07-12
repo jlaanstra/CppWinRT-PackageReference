@@ -28,6 +28,6 @@
         <MicrosoftDotNetNuGetTargets  Condition="'$(MicrosoftDotNetNuGetTargets)' == ''">Sdk.NuGet.targets</MicrosoftDotNetNuGetTargets>
     </PropertyGroup>
 
-    <Import Sdk="Microsoft.NET.Sdk" Project="$(MicrosoftDotNetNuGetTargets)" Condition="'$(EnableExperimentalPackageReferenceForCpp)' == 'true'" />
+    <Import Sdk="Microsoft.NET.Sdk" Project="$(MicrosoftDotNetNuGetTargets)" />
 
 </Project>
