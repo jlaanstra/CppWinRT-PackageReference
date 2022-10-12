@@ -21,6 +21,9 @@
         <TargetFrameworkMoniker>native,Version=v0.0</TargetFrameworkMoniker>
     
         <UseTargetPlatformAsNuGetTargetMoniker>false</UseTargetPlatformAsNuGetTargetMoniker>
+        
+        <!-- Don't copy local for native non-exe projects. -->
+        <CopyLocalLockFileAssemblies Condition="'$(ConfigurationType)' != 'Application' and '$(OutputType)'!='winexe' and '$(OutputType)'!='exe' and '$(OutputType)'!='appcontainerexe'">false</CopyLocalLockFileAssemblies>
     </PropertyGroup>
 
     <!-- Import the Microsoft.NET.Sdk and load the shim project, Sdk.NuGet.targets, that points to the .NET Sdk targets needed to populate the dependency tree. -->
